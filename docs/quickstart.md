@@ -2,6 +2,7 @@
 layout: default
 title: 🚀 Quick Start With GitHub Pages
 nav_order: 1
+nav_exclude: true
 ---
 
 # 🚀 Quick Start With GitHub Pages

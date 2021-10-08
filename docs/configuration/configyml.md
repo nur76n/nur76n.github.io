@@ -2,6 +2,7 @@
 layout: default
 title: Theme Configuration
 nav_order: 1
+nav_exclude: true
 ---
 
 # Theme Configuration

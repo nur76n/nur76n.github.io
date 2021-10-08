@@ -8,6 +8,7 @@ layout: default
 title: Markdown Kitchen Sink Example
 excerpt: A sample description for SEO.
 nav_order: 2
+nav_exclude: true
 ---
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.

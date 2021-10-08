@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Local Development Index Page
+title: Главная страница
 nav_order: 1
 ---
 
-# Local Development Index Page
+# Главная страница
 
 This index page is only visible if developing the theme as Jekyll is served
 from the repository top directory.
