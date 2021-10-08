@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Proxmox Cloud-Init
-nav_order: 1
+nav_order: 70
 ---
 
 # Proxmox Cloud-Init
