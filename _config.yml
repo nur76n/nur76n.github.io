@@ -9,8 +9,8 @@ webrick:
 # Theme settings
 site_author: nur76n
 repo_url: 'https://github.com/nur76n/nur76n.github.io'
-edit_on_github: false
-github_docs_folder: false
+edit_on_github: true
+github_docs_folder: true
 sticky_navigation: true
 prev_next_buttons_location: both
 search_enabled: true
