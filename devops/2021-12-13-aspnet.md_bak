@@ -4,9 +4,8 @@ title: ASP.NET Deploy
 nav_order: 80
 ---
 
-# ASP.NET Deploy
+## ASP.NET Deploy
 
-# Установка
 Список команд:
 ```
 apt install certbot nginx
