@@ -101,9 +101,12 @@ lsblk
 
 ## Увеличение размера
 ---
+```bash
 iscsiadm -m node --targetname target_name -R
 multipathd -k"resize map multipath_device"
-
+cfdisk /dev/mapper/multipath_disk
+pvresize /dev/mapper/multipath_disk_part_n
+```
 
 ## Полезные ссылки
 ---
