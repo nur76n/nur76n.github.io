@@ -99,6 +99,12 @@ vgscan
 lsblk
 ```
 
+## Увеличение размера
+---
+iscsiadm -m node --targetname target_name -R
+multipathd -k"resize map multipath_device"
+
+
 ## Полезные ссылки
 ---
 * [Статья от RedHat о фильрах LVM](https://access.redhat.com/documentation/ru-ru/red_hat_enterprise_linux/5/html/logical_volume_manager_administration/lvm_filters)
