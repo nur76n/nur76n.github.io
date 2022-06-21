@@ -108,6 +108,28 @@ cfdisk /dev/mapper/multipath_disk
 pvresize /dev/mapper/multipath_disk_part_n
 ```
 
+## Отключение зависших дисков
+
+```bash
+dmsetup info -c | grep san1
+vg--san1--vol1-vm--148--disk--1 253  27 L--w    0    3      0 LVM-6ZO29Qr8HJuM3YzL23SNNhoKHqXbmFA2V9iiZeCzqRVyy0I8X1EW7Mu1y7Y9UlIy
+vg--san1--vol1-vm--133--disk--0 253  29 L--w    0    1      0 LVM-6ZO29Qr8HJuM3YzL23SNNhoKHqXbmFA2Vl7REiJbdkl98V6DHqU3LAhGNOGbpKfG
+vg--san1--vol1-vm--148--disk--0 253  25 L--w    0    2      0 LVM-6ZO29Qr8HJuM3YzL23SNNhoKHqXbmFA2QCIyXwBzBdN102UYoyHkcfb1ekLjCMRB
+vg--san1--vol1-vm--147--disk--0 253  26 L--w    0    1      0 LVM-6ZO29Qr8HJuM3YzL23SNNhoKHqXbmFA2eKK6h60xG3VJ2ZkfwU3DcvG3uuKUSBMO
+mpath_san1_vol1                 253  24 L--w    5    1     33 mpath-0x20200013780d74c0
+vg--san1--vol1-vm--144--disk--0 253  28 L--w    0    1      0 LVM-6ZO29Qr8HJuM3YzL23SNNhoKHqXbmFA2roNDaYIhlsypfMPo3e4e6qnxOIx3z2Yc
+```
+
+```bash
+ls -la /sys/dev/block/253\:27
+lrwxrwxrwx 1 root root 0 Jun  6 20:09 /sys/dev/block/253:27 -> ../../devices/virtual/block/dm-27
+```
+
+```bash
+dmsetup remove /dev/dm-27
+```
+
+
 ## Полезные ссылки
 ---
 * [Статья от RedHat о фильрах LVM](https://access.redhat.com/documentation/ru-ru/red_hat_enterprise_linux/5/html/logical_volume_manager_administration/lvm_filters)
